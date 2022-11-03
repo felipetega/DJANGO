@@ -13,11 +13,34 @@ py manage.py startapp polls
 VERIFY IT'S WORKING
 py manage.py runserver
 
-1.
-manage.py
-...\> django-admin <command> [options]
-...\> manage.py <command> [options]
-...\> py -m django <command> [options]
+CREATE THE TABLES IN DATABASE
+py manage.py migrate
 
-help
-django-admin help
+CREATE NEW MODELS
+py manage.py makemigrations polls
+
+RUN MIGRATIONS
+The sqlmigrate command doesn’t actually run the migration on your database - instead, it prints it to the screen so that you can see what SQL Django thinks is required
+py manage.py sqlmigrate polls 0001
+
+CREATE MODELS IN DB
+py manage.py migrate
+
+PLAY API
+py manage.py shell
+
+CREATE ADMIN USER
+py manage.py createsuperuser
+
+START THE DEVELOPMENT SERVER
+py manage.py runserver
+
+1.
+3 STEP GUIDE to making model changes:
+
+Change your models (in models.py).
+Run python manage.py makemigrations to create migrations for those changes
+Run python manage.py migrate to apply those changes to the database.
+
+2.
+It’s important to add __str__() methods to your models, not only for your own convenience when dealing with the interactive prompt, but also because objects’ representations are used throughout Django’s automatically-generated admin.
