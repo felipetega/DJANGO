@@ -1,0 +1,23 @@
+STARTPROJECT
+(in the directory you want)
+django-admin startproject mysite
+
+RUNSERVER
+(in manage.py directory)
+py manage.py runserver //NÃO USAR QUANDO EM PRODUÇÃO, SOMENTE DURANTE O DESENVOLVIMENTO
+
+CREATE YOUR APP
+(in manage.py directory)
+py manage.py startapp polls
+
+VERIFY IT'S WORKING
+py manage.py runserver
+
+1.
+manage.py
+...\> django-admin <command> [options]
+...\> manage.py <command> [options]
+...\> py -m django <command> [options]
+
+help
+django-admin help
