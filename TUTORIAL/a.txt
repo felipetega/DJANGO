@@ -1,5 +1,4 @@
-PART 5
-Let’s look at some of these more closely.
+PART 7
 
 There’s a problem here,
 %HOMEPATH%\.virtualenvs\djangodev\Scripts\activate.bat
